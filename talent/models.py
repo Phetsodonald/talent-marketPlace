@@ -17,6 +17,9 @@ class TalentProfile(models.Model):
     bio = models.TextField(blank=True)
     city = models.CharField(max_length=100)
     price_from = models.DecimalField(max_digits=10, decimal_places=2)
-
+    profile_image = models.URLField(blank=True, null=True)
+    rating = models.FloatField(default=0)
+    is_verified = models.BooleanField(default=False)
+    
     def __str__(self):
         return self.stage_name
