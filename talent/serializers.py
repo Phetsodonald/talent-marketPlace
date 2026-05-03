@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import TalentProfile, Category
 
-class CategorySerializer(serializers.ModelSerializers):
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = '__all__'
